@@ -1,6 +1,6 @@
 package per.cby.terminal.redis;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import per.cby.frame.redis.annotation.RedisStorage;
 import per.cby.frame.redis.storage.hash.DefaultRedisHashStorage;
@@ -12,7 +12,7 @@ import per.cby.frame.redis.storage.hash.DefaultRedisHashStorage;
  * @since 2019年11月29日
  *
  */
-@Component("__IMEI_SN_HASH__")
+@Repository("__IMEI_SN_HASH__")
 @RedisStorage("terminal:imei:sn:hash")
 public class ImeiSnHash extends DefaultRedisHashStorage<String, String> {
 

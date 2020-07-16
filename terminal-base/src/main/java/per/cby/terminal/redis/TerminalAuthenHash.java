@@ -3,7 +3,7 @@ package per.cby.terminal.redis;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import per.cby.collect.common.constant.CollectConstant;
 import per.cby.frame.redis.annotation.RedisStorage;
@@ -18,7 +18,7 @@ import per.cby.terminal.service.TerminalService;
  * @since 2020年3月19日
  *
  */
-@Component(CollectConstant.TERMINAL_AUTHEN_HASH)
+@Repository(CollectConstant.TERMINAL_AUTHEN_HASH)
 @RedisStorage("terminal:authen:hash")
 public class TerminalAuthenHash extends DefaultCatalogRedisValueStorage<Boolean> {
 

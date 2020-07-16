@@ -1,6 +1,6 @@
 package per.cby.terminal.redis;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import per.cby.frame.redis.annotation.RedisStorage;
 import per.cby.frame.redis.storage.hash.DefaultRedisHashStorage;
@@ -13,7 +13,7 @@ import per.cby.terminal.bo.TerminalState;
  * @since 2020年2月15日
  *
  */
-@Component("__TERMINAL_STATE_HASH__")
+@Repository("__TERMINAL_STATE_HASH__")
 @RedisStorage("terminal:state")
 public class TerminalStateHash extends DefaultRedisHashStorage<String, TerminalState> {
 

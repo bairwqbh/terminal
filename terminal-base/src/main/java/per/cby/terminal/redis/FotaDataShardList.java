@@ -1,6 +1,6 @@
 package per.cby.terminal.redis;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import per.cby.frame.redis.annotation.RedisStorage;
 import per.cby.frame.redis.storage.list.FlexRedisListStorageImpl;
@@ -13,7 +13,7 @@ import per.cby.frame.redis.storage.list.FlexRedisListStorageImpl;
  *
  */
 //@Slf4j
-@Component("__FOTA_DATA_SHARD_LIST__")
+@Repository("__FOTA_DATA_SHARD_LIST__")
 @RedisStorage("terminal:fota:data:shard:list")
 public class FotaDataShardList extends FlexRedisListStorageImpl<byte[]> {
 

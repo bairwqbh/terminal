@@ -1,6 +1,6 @@
 package per.cby.terminal.redis;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import per.cby.frame.redis.annotation.RedisStorage;
 import per.cby.frame.redis.storage.hash.DefaultRedisHashStorage;
@@ -13,7 +13,7 @@ import per.cby.terminal.model.Fota;
  * @since 2019年11月29日
  *
  */
-@Component("__FOTA_HASH__")
+@Repository("__FOTA_HASH__")
 @RedisStorage("terminal:fota:hash")
 public class FotaHash extends DefaultRedisHashStorage<String, Fota> {
 
