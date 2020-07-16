@@ -1,6 +1,7 @@
 package per.cby.terminal.service;
 
 import per.cby.collect.common.model.TerminalMessage;
+import per.cby.collect.common.service.FotaExchanger;
 import per.cby.terminal.constant.AssoMode;
 import per.cby.terminal.model.Fota;
 
@@ -11,7 +12,7 @@ import per.cby.terminal.model.Fota;
  * @since 2020年3月20日
  *
  */
-public interface FotaProcessService {
+public interface FotaProcessService extends FotaExchanger {
 
     /**
      * FOTA升级异步关联启动
@@ -27,14 +28,6 @@ public interface FotaProcessService {
      * @return 响应消息
      */
     void associate(TerminalMessage message);
-
-    /**
-     * FOTA升级消息同步交换
-     * 
-     * @param message 请求消息
-     * @return 响应消息
-     */
-    TerminalMessage exchange(TerminalMessage message);
 
     /**
      * FOTA升级消息异步关联发送
